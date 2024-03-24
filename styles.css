@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
-/* Josh Comeau's Custom CSS Reset */
+/* CSS Reset */
 *,
 *::before,
 *::after {
@@ -11,37 +11,10 @@
   margin: 0;
 }
 
-img,
-picture,
-video,
-canvas,
-svg {
+img {
   display: block;
   max-width: 100%;
 }
-
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
-
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  overflow-wrap: break-word;
-}
-
-#root,
-#__next {
-  isolation: isolate;
-}
-/* CSS Reset ends */
 
 :root {
   --white: hsl(0, 0%, 100%);
@@ -52,19 +25,13 @@ h6 {
 
 body {
   height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  place-content: center;
+  background-color: var(--light-gray);
 
   font-family: 'Outfit', sans-serif;
   font-weight: 400;
   font-size: 0.9375rem;
-
-  background-color: var(--light-gray);
-}
-
-main {
-  padding: 1rem;
 }
 
 .card-wrapper {
@@ -72,13 +39,14 @@ main {
   flex-direction: column;
   align-items: center;
 
-  border-radius: 20px;
+  border-radius: 1.25rem;
   overflow: hidden;
-  max-width: 320px;
-  padding: 1rem;
 
+  max-width: 20rem;
+  padding: 1rem;
   text-align: center;
   background-color: var(--white);
+  margin: 1rem;
 }
 
 .card-img {
@@ -88,13 +56,13 @@ main {
   margin-bottom: 1.5rem;
 }
 
-h1 {
+.card-description h1 {
   font-size: 1.375rem;
   margin-bottom: 1rem;
   color: var(--dark-blue);
 }
 
-p {
+.card-description p {
   margin-bottom: 1rem;
   color: var(--grayish-blue);
 }
